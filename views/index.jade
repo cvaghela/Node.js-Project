@@ -29,12 +29,12 @@ html
               |                             Success, you are now registered and can login!
 
 
-          form.form-horizontal.m-t-20(method='post', action='/')
+          form.form-horizontal.m-t-20(method='post', action='/users/login')
 
 
             .form-group
               .col-xs-12
-                input.form-control(name='email', type='email', required='', placeholder='Email Id')
+                input.form-control(name='username', type='email', required='', placeholder='Email Id')
             .form-group
               .col-xs-12
                 input.form-control(name='password', type='password', required='', placeholder='Password')

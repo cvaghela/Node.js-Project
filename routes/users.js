@@ -28,13 +28,13 @@ router.get('/index', function(req, res, next) {
   res.render('index');
 });
 
-router.post('/index', passport.authenticate('local', {failureRedirect:'/'}), function(req, res) {
-
-    res.redirect('/');
+router.post('/login', passport.authenticate('local', {failureRedirect:'/'}), function(req, res) {
+    console.log('Authentication was called');
+    res.redirect('/users/home');
 
 });
 
-passport.serializeUser(function (user, done) {
+passport.serializeUser(function(user, done) {
   done(null, user.id);
 });
 
@@ -46,10 +46,10 @@ passport.deserializeUser(function(id, done) {
 
 passport.use(new LocalStrategy(function(email, password, done) {
   User.getUserByEmail(email, function(err, user) {
-    if(err) throw err;
+    if (err) { return done(err); }
     if(!user){
 console.log('It is /');
-      return done(null, false, {message: 'Unknown User'});
+      return done(null, false, {message: 'Incorrect Username!'});
     }
 
     User.comparePassword(password, user.password, function(err, isMatch){
@@ -58,7 +58,7 @@ console.log('It is /');
         return done(null, user);
       } else {
 console.log('It is /');
-        return done(null, false, {message:'Invalid Password'});
+        return done(null, false, {message:'Invalid Password!'});
       }
     });
   });
