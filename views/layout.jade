@@ -1,0 +1,122 @@
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui')
+    title Project - Node.js Project
+    meta(content='Admin Dashboard', name='description')
+    meta(content='ThemeDesign', name='author')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    link(rel='shortcut icon', href='/images/favicon.ico')
+    link(href='/stylesheets/bootstrap.min.css', rel='stylesheet', type='text/css')
+    link(href='/stylesheets/icons.css', rel='stylesheet', type='text/css')
+    link(href='/stylesheets/style.css', rel='stylesheet', type='text/css')
+  body.fixed-left
+    // Begin page
+    #wrapper
+      // Top Bar Start
+      .topbar
+        // LOGO
+        .topbar-left
+          .text-center
+            // <a href="index.html" class="logo"><span>Up</span>Bond</a>
+            // <a href="index.html" class="logo-sm"><span>U</span></a>
+            a.logo()
+              img(src='/images/logo.png', height='20', alt='logo')
+            a.logo-sm(href='index.html')
+              img(src='/images/logo_sm.png', height='30', alt='logo')
+        // Button mobile view to collapse sidebar menu
+        .navbar.navbar-default(role='navigation')
+          .container
+            div
+              .pull-left
+                button.button-menu-mobile.open-left.waves-effect.waves-light(type='button')
+                  i.ion-navicon
+                span.clearfix
+              ul.nav.navbar-nav.navbar-right.pull-right
+                li.hidden-xs
+                  a#btn-fullscreen.waves-effect.waves-light.notification-icon-box(href='#')
+                    i.ion-qr-scanner
+                li.dropdown
+                  a.dropdown-toggle.profile.waves-effect.waves-light(href='#', data-toggle='dropdown', aria-expanded='true')
+                    img.img-circle(src='/images/users/avatar-1.jpg', alt='user-img')
+                    span.profile-username
+                      | Chintan Vaghela
+                      span.caret
+                  ul.dropdown-menu
+                    li
+                      a(href='javascript:void(0)')  Profile
+                    li
+                      a(href='javascript:void(0)')  Lock screen
+                    li.divider
+                    li
+                      a(href='javascript:void(0)')  Logout
+            // /.nav-collapse
+      // Top Bar End
+      // ========== Left Sidebar Start ==========
+      .left.side-menu
+        .sidebar-inner.slimscrollleft
+          form.sidebar-search
+            div
+              input.form-control.search-bar(type='text', placeholder='Search...')
+            button.btn.btn-search(type='submit')
+              i.fa.fa-search
+          .user-details
+            .text-center
+              img.img-circle(src='/images/users/avatar-1.jpg', alt='')
+            .user-info
+              .dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown', aria-expanded='false')
+                  | Chintan A. Vaghela
+                  span.caret
+                ul.dropdown-menu
+                  li
+                    a(href='javascript:void(0)')  Profile
+                  li
+                    a(href='javascript:void(0)')  Lock screen
+                  li.divider
+                  li
+                    a(href='javascript:void(0)')  Logout
+              // <p class="text-muted m-0"><i class="fa fa-dot-circle-o text-success"></i> Online</p>
+          // - Divider
+          #sidebar-menu
+            ul
+              li.active
+                a.waves-effect(href='users/home')
+                  i.ion-ios7-analytics
+                  span
+                    | Dashboard
+                    span.badge.badge-success.pull-right 0
+          .clearfix
+        // end sidebarinner
+      // Left Sidebar End
+      // Start right Content here
+      .content-page
+        // Start content
+        .content
+          div
+            .page-header-title
+              h4.page-title Dashboard
+          .page-content-wrapper
+            .container
+            // container
+          // Page content Wrapper
+        // content
+        footer.footer
+          | Node.js Project
+      // End Right content here
+    // END wrapper
+    // jQuery
+    script(src='/js/jquery.min.js')
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/modernizr.min.js')
+    script(src='/js/detect.js')
+    script(src='/js/fastclick.js')
+    script(src='/js/jquery.slimscroll.js')
+    script(src='/js/jquery.blockUI.js')
+    script(src='/js/waves.js')
+    script(src='/js/wow.min.js')
+    script(src='/js/jquery.nicescroll.js')
+    script(src='/js/jquery.scrollTo.min.js')
+    script(src='/js/app.js')
