@@ -21,17 +21,39 @@ html
             a.logo.logo-admin(href='/users/login')
               img(src='/images/logo_dark.png', height='28', alt='logo')
           h4.text-muted.text-center.m-t-0
-            b Reset Password
+            b Sign In
+
           form.form-horizontal.m-t-20(action='/')
             .alert.alert-info.alert-dismissible
               button.close(type='button', data-dismiss='alert', aria-hidden='true') ×
-              |                             Enter your Email and instructions will be sent to you!
+              |                             Success, you are now registered and can login!
+
+
+          form.form-horizontal.m-t-20(method='post', action='/users/login')
+
+
             .form-group
               .col-xs-12
-                input.form-control(type='email', required='', placeholder='Email')
-            .form-group.text-center.m-t-30.m-b-0
+                input.form-control(name='username', type='email', required='', placeholder='Email Id')
+            .form-group
               .col-xs-12
-                button.btn.btn-primary.btn-block.btn-lg.waves-effect.waves-light(type='submit') Send Mail
+                input.form-control(name='password', type='password', required='', placeholder='Password')
+            .form-group
+              .col-xs-12
+                .checkbox.checkbox-primary
+                  input#checkbox-signup(type='checkbox')
+                  label(for='checkbox-signup')
+                    | Remember me
+            .form-group.text-center.m-t-40
+              .col-xs-12
+                button.btn.btn-primary.btn-block.btn-lg.waves-effect.waves-light(type='submit', name='submit', value='login') Log In
+            .form-group.m-t-30.m-b-0
+              .col-sm-7
+                a.text-muted(href='recoverpassword')
+                  i.fa.fa-lock.m-r-5
+                  |  Forgot your password?
+              .col-sm-5.text-right
+                a.text-muted(href='register') Create an account
     // jQuery
     script(src='/js/jquery.min.js')
     script(src='/js/bootstrap.min.js')

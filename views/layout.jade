@@ -20,11 +20,11 @@ html
         // LOGO
         .topbar-left
           .text-center
-            // <a href="index.html" class="logo"><span>Up</span>Bond</a>
-            // <a href="index.html" class="logo-sm"><span>U</span></a>
+            // <a href="/" class="logo"><span>Up</span>Bond</a>
+            // <a href="/" class="logo-sm"><span>U</span></a>
             a.logo()
               img(src='/images/logo.png', height='20', alt='logo')
-            a.logo-sm(href='index.html')
+            a.logo-sm(href='/')
               img(src='/images/logo_sm.png', height='30', alt='logo')
         // Button mobile view to collapse sidebar menu
         .navbar.navbar-default(role='navigation')
@@ -51,7 +51,7 @@ html
                       a(href='javascript:void(0)')  Lock screen
                     li.divider
                     li
-                      a(href='javascript:void(0)')  Logout
+                      a(href='/users/logout')  Logout
             // /.nav-collapse
       // Top Bar End
       // ========== Left Sidebar Start ==========
@@ -77,13 +77,13 @@ html
                     a(href='javascript:void(0)')  Lock screen
                   li.divider
                   li
-                    a(href='javascript:void(0)')  Logout
+                    a(href='/users/logout')  Logout
               // <p class="text-muted m-0"><i class="fa fa-dot-circle-o text-success"></i> Online</p>
           // - Divider
           #sidebar-menu
             ul
               li.active
-                a.waves-effect(href='users/home')
+                a.waves-effect(href='/')
                   i.ion-ios7-analytics
                   span
                     | Dashboard
@@ -101,6 +101,7 @@ html
           .page-content-wrapper
             .container
             // container
+            block content
           // Page content Wrapper
         // content
         footer.footer
@@ -120,3 +121,6 @@ html
     script(src='/js/jquery.nicescroll.js')
     script(src='/js/jquery.scrollTo.min.js')
     script(src='/js/app.js')
+    <script src="/plugins/jquery-knob/excanvas.js"></script>
+    <script src="/plugins/jquery-knob/jquery.knob.js"></script>
+    <script src="/js/app.js"></script>

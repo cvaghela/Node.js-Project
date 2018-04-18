@@ -16,21 +16,17 @@ router.get('/register', function(req, res, next) {
   res.render('register');
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('login');
+});
+
 router.get('/recoverpassword', function(req, res, next) {
   res.render('recoverpassword');
 });
 
-router.get('/home', function(req, res, next) {
-  res.render('home');
-});
-
-router.get('/index', function(req, res, next) {
-  res.render('index');
-});
-
-router.post('/login', passport.authenticate('local', {failureRedirect:'/'}), function(req, res) {
+router.post('/login', passport.authenticate('local', {failureRedirect:'/users/login'}), function(req, res) {
     console.log('Authentication was called');
-    res.redirect('/users/home');
+    res.redirect('/');
 
 });
 
@@ -82,9 +78,15 @@ router.post('/register', function(req, res, next) {
     console.log(user);
   });
 
-  res.location('/');
-  res.redirect('/');
+  res.location('/users/login');
+  res.redirect('/users/login');
 
+});
+
+router.get('/logout', function(req, res) {
+  req.logout();
+  req.flash('Success', 'You have been successfully logged out!');
+  res.redirect('/users/login');
 });
 
 module.exports = router;
