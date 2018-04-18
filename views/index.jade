@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-12
+        .panel.panel-primary
+          .panel-body
+            h4.m-b-30.m-t-0 Examples
+            .row.text-center
+              .col-md-4.text-center
+                h5 Disable display input
+                input.knob(data-width='150', data-fgcolor='#f03154', data-displayinput='false', value='35')
+              .col-md-4.text-center
+                h5 Cursor mode
+                input.knob(data-width='150', data-cursor='true', data-fgcolor='#5cb45b', value='29')
+              .col-md-4.text-center
+                h5 Display previous value
+                input.knob(data-width='150', data-min='-100', data-fgcolor='#f7b543', data-displayprevious='true', value='44')
+            .row
+              .col-md-4.text-center
+                h5 Angle offset
+                input.knob(data-width='150', data-angleoffset='90', data-linecap='round', data-fgcolor='#7578f9', value='35')
+              .col-md-4.text-center
+                h5 5-digit values, step 1000
+                input.knob(data-width='150', data-min='-15000', data-displayprevious='true', data-max='15000', data-step='1000', value='-11000', data-fgcolor='#ed699b')
+              .col-md-4.text-center
+                h5 Angle offset and arc
+                input.knob(data-width='150', data-cursor='true', data-fgcolor='#212121', value='29')
+    // End row
+  // container
+// Page content Wrapper
