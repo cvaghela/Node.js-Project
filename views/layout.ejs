@@ -11,6 +11,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link href="/plugins/bootstrap-sweetalert/sweet-alert.css" rel="stylesheet" type="text/css">
+  <link href="/plugins/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="/stylesheets/icons.css" rel="stylesheet" type="text/css">
   <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
@@ -39,7 +40,7 @@
               <li class="hidden-xs"><a id="btn-fullscreen" href="#" class="waves-effect waves-light notification-icon-box"><i class="ion-qr-scanner"></i></a></li>
               <li class="dropdown"><a href="#" data-toggle="dropdown" aria-expanded="true" class="dropdown-toggle profile waves-effect waves-light"><img src="/images/users/avatar-1.jpg" alt="user-img" class="img-circle"><span class="profile-username">Chintan Vaghela<span class="caret"></span></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="javascript:void(0)"> Profile</a></li>
+                  <li><a href="/setup-2fa"> Profile</a></li>
                   <li><a href="javascript:void(0)"> Lock screen</a></li>
                   <li class="divider"></li>
                   <li><a href="/logout"> Logout</a></li>
@@ -66,7 +67,7 @@
           <div class="user-info">
             <div class="dropdown"><a href="#" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">Chintan A. Vaghela<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="javascript:void(0)"> Profile</a></li>
+                <li><a href="/setup-2fa"> Profile</a></li>
                 <li><a href="javascript:void(0)"> Lock screen</a></li>
                 <li class="divider"></li>
                 <li><a href="/logout"> Logout</a></li>
@@ -78,7 +79,10 @@
         <!-- - Divider-->
         <div id="sidebar-menu">
           <ul>
-            <li class="active"><a href="/" class="waves-effect"><i class="ion-ios7-analytics"></i><span>Dashboard<span class="badge badge-success pull-right">0</span></span></a></li>
+            <li class="active"><a href="profile" class="waves-effect"><i class="ion-ios7-analytics"></i><span>Dashboard<span class="badge badge-success pull-right">0</span></span></a></li>
+          </ul>
+          <ul>
+            <li><a href="upload" class="waves-effect"><i class="ion-folder"></i><span>Upload</span></a></li>
           </ul>
         </div>
         <div class="clearfix"></div>
@@ -92,38 +96,36 @@
       <div class="content">
         <div>
           <div class="page-header-title">
-            <h4 class="page-title">Dashboard</h4>
+
+            <%- content %>
+              <!-- container-->
           </div>
+          <!-- Page content Wrapper-->
         </div>
-        <div class="page-content-wrapper">
-          <div class="container"></div>
-          <div class="container"></div>
-          <%- content %>
-            <!-- container-->
-        </div>
-        <!-- Page content Wrapper-->
+        <!-- content-->
+        <footer class="footer">Node.js Project</footer>
       </div>
-      <!-- content-->
-      <footer class="footer">Node.js Project</footer>
+      <!-- End Right content here-->
     </div>
-    <!-- End Right content here-->
-  </div>
-  <!-- END wrapper-->
-  <!-- jQuery-->
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/modernizr.min.js"></script>
-  <script src="/js/detect.js"></script>
-  <script src="/js/fastclick.js"></script>
-  <script src="/js/jquery.slimscroll.js"></script>
-  <script src="/js/jquery.blockUI.js"></script>
-  <script src="/js/waves.js"></script>
-  <script src="/js/wow.min.js"></script>
-  <script src="/js/jquery.nicescroll.js"></script>
-  <script src="/js/jquery.scrollTo.min.js"></script>
-  <script src="/plugins/bootstrap-sweetalert/sweet-alert.min.js"></script>
-  <script src="/pages/sweet-alert.init.js"></script>
-  <script src="/js/app.js"></script>
+    <!-- END wrapper-->
+    <!-- jQuery-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/modernizr.min.js"></script>
+    <script src="/js/detect.js"></script>
+    <script src="/js/fastclick.js"></script>
+    <script src="/js/jquery.slimscroll.js"></script>
+    <script src="/js/jquery.blockUI.js"></script>
+    <script src="/js/waves.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/jquery.nicescroll.js"></script>
+    <script src="/js/jquery.scrollTo.min.js"></script>
+    <script src="/plugins/bootstrap-sweetalert/sweet-alert.min.js"></script>
+    <script src="/pages/sweet-alert.init.js"></script>
+    <script src="/plugins/dropzone/dist/dropzone.js"></script>
+    <script src="/js/upload.js"></script>
+
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

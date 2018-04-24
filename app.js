@@ -6,6 +6,8 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('passport');
+var formidable = require('formidable');
+var fs = require('fs');
 var setupPassport = require('./config/passport');
 var routes = require('./routes/index');
 
