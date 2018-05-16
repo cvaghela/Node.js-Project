@@ -47,7 +47,7 @@ Step 2: Installing Node.js and the modules. [This step needs to be performed onl
 
 1.) Open your Terminal
 
-2.) Make the project directory (nodeauth1 or nodeauth2) your current working directory (e.g. cd nodeauth1)
+2.) Make the project directory (Node.js-Project-master) your current working directory (e.g. cd Node.js-Project-master)
 
 3.) Run the following command: sudo npm install
 
@@ -57,7 +57,7 @@ Step 3: How to run the project. [This step needs to be performed every time you 
 
 1.) Open your Terminal
 
-2.) Make the project directory (nodeauth1 or nodeauth2) your current working directory (e.g. cd nodeauth1)
+2.) Make the project directory (Node.js-Project-master) your current working directory (e.g. cd Node.js-Project-master)
 
 3.) Run the following command: npm start
 
@@ -67,8 +67,8 @@ NOTE: This will start your server and on the console / terminal it will show the
 
 5.) Type the following in the url: http://localhost:PORT/
 
-NOTE: PORT for nodeauth1 is 3000 and PORT for nodeauth2 is 8080. (These ports will be reflected in the console / terminal once the server is running.)
+NOTE: PORT for Node.js-Project-master is 3000. (This port will be reflected in the console / terminal once the server is running.)
 
-It is a lot more easier to code if you import the project folder (nodeauth1 or nodeauth2) in the ATOM. ( DOWNLOAD LINK: https://atom.io/ )
+It is a lot more easier to code if you import the project folder (Node.js-Project-master) in the ATOM. ( DOWNLOAD LINK: https://atom.io/ )
 
 That’s it! Have fun coding 😊
