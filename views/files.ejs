@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>File explorer with node.js</title>
+  <style>
+    body {
+      padding: 40px;
+    }
+
+    h3 {
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      border-bottom: 1px solid black;
+    }
+
+    h3>a {
+      margin-right: 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    ul {
+      list-style: none
+    }
+
+    ul>li>img {
+      position: relative;
+      top: 4px;
+      right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <% if (!vData.current) { %>
+    <h3><a href="/" title="Root directory">...</a><a href= "<%= vData.prev %>" title="Go back"><img src="/images/previous.png"></a></h3>
+    <% } %>
+      <ul>
+        <% vData.items.forEach(function(item) { %>
+
+          <li><img src="/images/folder.png">
+            <a href="<%= item.path %>">
+              <%= item.name %>
+            </a>
+          </li>
+
+          <% }); %>
+      </ul>
+</body>
+
+</html>

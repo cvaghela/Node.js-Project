@@ -1,0 +1,106 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww28600\viewh15620\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs36 \cf0 Follow the steps to run this Project on your computer:
+\b0\fs24 \
+\
+
+\b\fs28 Step 1:
+\b0\fs24  Install and setup Mongo DB on your Computer (Video Tutorial: {\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=DX15WbKidXY&index=26&list=WL&t=6s"}}{\fldrslt https://www.youtube.com/watch?v=DX15WbKidXY&index=26&list=WL&t=6s}}) 
+\b [This step needs to be performed only once]
+\b0 :\
+\
+1.) Download the \'93Community Server\'94 version of the Mongo DB on your Computer. ({\field{\*\fldinst{HYPERLINK "https://www.mongodb.com/download-center?jmp=nav#community"}}{\fldrslt https://www.mongodb.com/download-center?jmp=nav#community}})\
+\
+2.) Extract the downloaded file\
+\
+3.) Rename the extracted folder to \'91mongodb\'92 and then move it to the users/local/ directory. (It may vary from system to system)\
+\
+4.) Open your terminal.\
+\
+5.) Make \'91mongodb\'92 your current working directory. (For this case: cd \'93users/local/mongodb\'94)\
+\
+6.) Type the command and press enter: sudo mkdir -p /data/db (\'91sudo\'92 command asks you for your computer password)\
+\
+7.) Make db your current working directory: cd \'93/data/db\'94\
+\
+8.) Type the command and press enter: whoami (This gives you your username)\
+\
+9.) Type the command and press enter: sudo chown username /data/db (username is the output of whoami from the previous step.) (This step gives permission to the current directory /data/db).\
+\
+10.) Make you home directory your current working directory by the following command: cd\
+\
+11.) Find file named \'91.bash_profile\'92 with the following command: ls -al\
+\
+12.) If you don\'92t find this file, then create the file with the following command: touch .bash_profile\
+\
+13.) Open this file: open .bash_profile\
+\
+14.) Copy and paste the following lines in the editor, then save & close it:\
+\
+export MONGO_PATH=/Users/local/mongodb\
+export PATH=$PATH:$MONGO_PATH/bin\
+\
+
+\b NOTE:
+\b0  MONGO_PATH may vary from system to system.\
+\
+15.) Type the following command: source .bash_profile (and then, just restart the terminal)\
+\
+You are all set.\
+\
+
+\b IMPORTANT:
+\b0  Just run the command \'91mongod\'92 every time you want to start Mongo DB. This the mongo daemon command that starts up your Mongo DB. Mongo Daemon continues to run even after closing the terminal.\
+\
+
+\b\fs28 Step 2:
+\b0\fs24  Installing Node.js and the modules. 
+\b [This step needs to be performed only once]\
+
+\b0 \
+1.) Open your Terminal\
+\
+2.) Make the project directory (nodeauth1 or nodeauth2) your current working directory (e.g. cd nodeauth1)\
+\
+3.) Run the following command: sudo npm install\
+\
+
+\b NOTE:
+\b0  Once you enter the password and press enter, it will install Node.js and all the required modules.\
+\
+
+\b\fs28 Step 3:
+\b0\fs24  How to run the project. 
+\b [This step needs to be performed every time you want to run it]
+\b0 \
+\
+1.) Open your Terminal\
+\
+2.) Make the project directory (nodeauth1 or nodeauth2) your current working directory (e.g. cd nodeauth1)\
+\
+3.) Run the following command: npm start\
+\
+
+\b NOTE:
+\b0  This will start your server and on the console / terminal it will show the port on which it is running.\
+\
+4.) Open your browser\
+\
+5.) Type the following in the url: {\field{\*\fldinst{HYPERLINK "http://localhost:3000/"}}{\fldrslt http://localhost:PORT/}}\
+\
+
+\b NOTE:
+\b0  PORT for nodeauth1 is 3000 and PORT for nodeauth2 is 8080. (These ports will be reflected in the console / terminal once the server is running.)\
+\
+
+\b\fs28 It is a lot more easier to code if you import the project folder (nodeauth1 or nodeauth2) in the ATOM. ( DOWNLOAD LINK: {\field{\*\fldinst{HYPERLINK "https://atom.io/"}}{\fldrslt https://atom.io/}} )
+\b0\fs24 \
+\
+
+\b\fs36 That\'92s it! Have fun coding 
+\f1\b0 \uc0\u55357 \u56842 }

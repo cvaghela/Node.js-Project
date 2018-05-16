@@ -22,7 +22,7 @@
       <div class="panel-body">
         <h3 class="text-center m-t-0 m-b-15"><a href="/" class="logo logo-admin"><img src="/images/logo_dark.png" height="28" alt="logo"/></a></h3>
         <div class="form-group text-center m-t-40">
-          <h4 class="text-muted text-center m-t-0"><b>Connect Google Authenticator to your Account</b></h4>
+          <h4 class="text-muted text-center m-t-0"><b>Enter your code and authenticate</b></h4>
         </div>
         <div class="form-horizontal m-t-20">
 
@@ -31,11 +31,13 @@
             <form method="post">
 
               <div class="form-group">
-                <%- qr %>
+                <div class="col-xs-12">
+                  <input name="code" type="code" id="code" required="" placeholder="Authentication Code" class="form-control" />
+                </div>
               </div>
 
               <div class="form-group text-center m-t-20">
-                <button type="submit" class="btn btn-primary"> Save </button>
+                <button type="submit" class="btn btn-primary"> Verify </button>
               </div>
 
             </form>

@@ -10,6 +10,7 @@ var formidable = require('formidable');
 var fs = require('fs');
 var setupPassport = require('./config/passport');
 var routes = require('./routes/index');
+var ejsLint = require('ejs-lint');
 
 var app = express();
 
